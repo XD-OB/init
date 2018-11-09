@@ -1,0 +1,4 @@
+Le fichier qui contient les clefs RSA autorisees a se connecter via SSH:
+~/.ssh/authorized_keys
+ces clefs permet de se connecter a un autre site via SSH a partir de votre compte sans devoir taper a chaque fois le mot de passe
+il est configurable dans le fichier 'etc/ssh/sshd_config'

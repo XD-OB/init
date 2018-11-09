@@ -1,0 +1,28 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    04                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: obelouch <OB-96@hotmail.com>               +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/11/09 04:32:01 by obelouch          #+#    #+#              #
+#    Updated: 2018/11/09 05:30:19 by obelouch         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+#!/bin/sh
+
+if [ -e /backup/crontab ] 
+	then
+	if [ md5sum --status /etc/crontab backup/crontab ] 
+		then
+		cp -Rf /etc/crontab /backup/crontab
+		mail -s "WTF!! The crontab has been changed" root@localhost.com
+	fi
+else
+	cp /etc/crontab /etc/old_crontab
+fi
+
+#Pour plannifier ce fichier:
+#
+# crontab @midnight _script_

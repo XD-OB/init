@@ -1,0 +1,5 @@
+Le materiel qui fait la liason entre le resau local et l exterieur: NAT Server
+
+NAT : Network Address Translation			-->IP globale
+
+nat (10.21.1.1)

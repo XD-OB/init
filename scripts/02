@@ -1,0 +1,21 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    02                                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: obelouch <OB-96@hotmail.com>               +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/11/09 04:22:35 by obelouch          #+#    #+#              #
+#    Updated: 2018/11/09 05:36:18 by obelouch         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+#!/bin/sh
+
+sudo apt-get update >> /var/log/update_script.log
+sudo apt-get upgrade >> /var/log/update_script.log
+
+#pour plannifier cette tache:
+#il faut executer dans debian:
+#
+#/etc/crontab 0 4 * * * _script_

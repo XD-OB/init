@@ -1,0 +1,1 @@
+ps -aux | grep "/usr/sbin/sshd" | grep -v grep | tr -s " " | cut -d ' ' -f2
