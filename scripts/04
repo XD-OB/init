@@ -25,4 +25,5 @@ fi
 
 #Pour plannifier ce fichier:
 #
-# crontab @midnight _script_
+# crontab -e 
+# @midnight _script_
