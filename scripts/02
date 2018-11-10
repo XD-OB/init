@@ -18,4 +18,5 @@ sudo apt-get upgrade >> /var/log/update_script.log
 #pour plannifier cette tache:
 #il faut executer dans debian:
 #
-#/etc/crontab 0 4 * * * _script_
+# crontab -e
+# 0 4 * * * _script_
