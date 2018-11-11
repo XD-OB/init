@@ -12,15 +12,10 @@
 
 #!/bin/sh
 
-if [ -e /backup/crontab ] 
+if [ md5sum /etc/crontab | cut -d ' ' -f1 !=  /backup/crontab ]
 	then
-	if [ md5sum --status /etc/crontab backup/crontab ] 
-		then
-		cp -Rf /etc/crontab /backup/crontab
-		mail -s "WTF!! The crontab has been changed" root@localhost.com
-	fi
-else
-	cp /etc/crontab /backup/crontab
+	md5sum /etc/crontab | cut -d ' ' -f1 > /backup/crontab
+	mail -s "WTF!! The crontab has been changed" root@localhost.com
 fi
 
 #Pour plannifier ce fichier:
