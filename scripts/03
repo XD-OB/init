@@ -12,4 +12,9 @@
 
 #!/bin/sh
 
-ls -lS $1 | sed 1d
+if [ -d $1 ]
+  then
+  ls -lS $1 | sed 1d
+else
+  echo "Incorrect INPUT :("
+fi
