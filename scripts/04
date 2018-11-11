@@ -20,7 +20,7 @@ if [ -e /backup/crontab ]
 		mail -s "WTF!! The crontab has been changed" root@localhost.com
 	fi
 else
-	cp /etc/crontab /etc/old_crontab
+	cp /etc/crontab /backup/crontab
 fi
 
 #Pour plannifier ce fichier:
