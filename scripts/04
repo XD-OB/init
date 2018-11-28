@@ -15,7 +15,7 @@
 if [ md5sum /etc/crontab | cut -d ' ' -f1 !=  /backup/crontab ]
 	then
 	md5sum /etc/crontab | cut -d ' ' -f1 > /backup/crontab
-	mail -s "WTF!! The crontab has been changed" root@localhost.com
+	mail -s "WTF!! The crontab has been changed" root@localhost
 fi
 
 #Pour plannifier ce fichier:
