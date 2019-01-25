@@ -1,4 +1,4 @@
-# init
+# INIT
 1er Project dans le Networking dans le cursus du 1337
 
 
